@@ -1,0 +1,22 @@
+.main_container{
+    background-color:cornsilk;
+}
+
+.main_view{
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+}
+
+.form_control{
+    background-color: lavender;
+}
+
+.row{
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    align-items: center;
+    justify-content: center;
+}

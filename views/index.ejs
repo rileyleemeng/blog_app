@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+<div class="main_container min-vh-100">
+    <div class="content-container">
+        <% if(posts.length === 0){ %>
+            <div class="text-center">
+                <h3>Here is empty now...</h3>
+            </div>
+        <% }else{ %>
+            <ul>
+                <% posts.forEach((post) => { %>
+                <li>
+                    <p><%= post.date %></p>
+                    <h3><a href="/view/<%= posts.indexOf(post) %>"><%= post.title %></a></h3>
+                    <p><%= post.content %></p>
+                    <hr>
+                </li>
+                <% }); %> 
+            </ul>
+        <% } %> 
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

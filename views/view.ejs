@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<div class="main_view min-vh-100">
+    <div class="row">
+        <div class="post_view col-lg-8 col-12 p-4">
+            <h1><%= title %></h1>
+            <p><%= content %></p>
+        </div>
+        <div class="delete_and_edit col-lg-2 col-8 my-4 mx-4 p-4 text-center" style="height: 170px;">
+            <form action="/delete" method="post">
+                <input type="text" name="postId" hidden value= "<%= postId %>">
+                <input style="width: 85%;" class="btn btn-danger" type="submit" name="delete" value="delete"> 
+            </form>
+
+            <a href="/edit/<%= postId %>"><input style="width: 85%;" class="btn btn-light" type="button" value="Edit"></a>
+        </div>
+    </div>
+</div>
+ 
+<%- include("partials/footer.ejs") %>
